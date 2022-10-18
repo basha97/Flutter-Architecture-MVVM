@@ -4,6 +4,7 @@ import 'package:flutter_mvvm/presentation/login/login.dart';
 import 'package:flutter_mvvm/presentation/main/main_view.dart';
 import 'package:flutter_mvvm/presentation/onboarding/onboarding.dart';
 import 'package:flutter_mvvm/presentation/register/register.dart';
+import 'package:flutter_mvvm/presentation/resources/strings_manager.dart';
 import 'package:flutter_mvvm/presentation/splash/splash.dart';
 import 'package:flutter_mvvm/presentation/store_details/store_details.dart';
 
@@ -42,8 +43,8 @@ class RouteGenerator {
   static Route<dynamic> UnDefinedRoute() {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
-        appBar: AppBar(title: Text('No Route Found')),
-        body: Center(child: Text('No Route Found')),
+        appBar: AppBar(title: const Text(AppStrings.noRouteFound)),
+        body: const Center(child: Text(AppStrings.noRouteFound)),
       ),
     );
   }
